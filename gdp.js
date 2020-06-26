@@ -44,6 +44,34 @@ var options = {
       color:'#9699a2'
     }
   },
+  // Responsive line chart - legend position: right, bottom; legend: show or not
+  responsive: [
+    {
+      breakpoint: 1200,
+      options: {
+
+        legend: {
+          position: "bottom"
+        }
+      }
+    },
+    {
+      breakpoint: 992,
+      options: {
+        legend: {
+          position:"bottom"
+        }
+      }
+    },
+    {
+      breakpoint: 768,
+      options: {
+        legend: {
+          show:false,
+        }
+      }
+    }
+  ],
   stroke:{
     width:2,
   },
