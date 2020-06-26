@@ -55,7 +55,7 @@ var female = 0;
 
 // Pie Chart to show gender info:  genderChart
 var optionsGender = {
-  series: [54, 950,26],
+  series: [53, 866,24],
   labels:['Female Laureates','Male Laureates','Organization Laureates'],
   chart: {
   type: 'donut',
@@ -72,7 +72,7 @@ title:{
   },
 },
 subtitle:{
-  text:'Female Laureates VS. Male Laureates 54:950',
+  text:'As of 2019,Female Laureates VS. Male Laureates 53:866',
   style:{
     fontSize:'14px',
     color:'#9699a2'
