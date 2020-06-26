@@ -38,7 +38,7 @@ var options = {
     },
   },
   subtitle:{
-    text:'This chart only show TOP50 2018 HDI Ranking countries and China as well as baseline data for comparision.',
+    text:'This chart only show TOP30 2018 HDI Ranking countries and China as well as baseline data for comparision.',
     style:{
       fontSize:'14px',
       color:'#9699a2'
@@ -137,7 +137,7 @@ async function loadData(file){
        if(rank == 0 ){
         chart.appendSeries(element);
        }
-       if(rank >0 && rank <51){
+       if(rank >0 && rank <31){
         element.name = 'No.' + rank +' \xa0'+ data[hdi]["country"];
         chart.appendSeries(element);
        }
@@ -152,7 +152,7 @@ async function loadData(file){
       if (rank ==0){
         chart.toggleSeries(country);
       }
-      if(rank >0 && rank<51 && rank!=8){
+      if(rank >0 && rank<31 && rank!=8){
         name = 'No.' + rank +' \xa0'+ country;
         chart.toggleSeries(name);
       }

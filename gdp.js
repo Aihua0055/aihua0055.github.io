@@ -31,14 +31,14 @@ var options = {
     }
   },
   title:{
-    text:"GDP",
+    text:"GDP per captia around the World",
     style:{
       fontSize:'24px',
       
     },
   },
   subtitle:{
-    text:'GDP',
+    text:'This line chart only show TOP25 countries with the highest GDP per captia',
     style:{
       fontSize:'14px',
       color:'#9699a2'

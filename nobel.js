@@ -5,6 +5,7 @@ var options = {
 }],
   chart: {
   type: 'bar',
+  height: '500px',
 },
 title:{
   text:"Nobel Laureates number by country of birth",
@@ -23,15 +24,26 @@ subtitle:{
 plotOptions: {
   bar: {
     horizontal: true,
+    dataLabels:{
+      position:'bottom'
+    }
   }
 },
 dataLabels: {
-  enabled: false
+  enabled: true,
 },
 xaxis: {
   categories: ['United States','United Kingdom','Germany','France','Sweden','Russia','Switzerland','Japan','Canada','Austria','Netherlands',
   'Italy','Poland','Denmark','Norway','India','Australia','South Africa','China'],
-}
+ 
+},
+yaxis: {
+  labels: {
+    style:{
+      fontSize:'13px',
+    }
+  }
+},
 };
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
@@ -123,9 +135,6 @@ responsive: [{
 var prizeShareChart = new ApexCharts(document.querySelector("#prizeShareChart"), optionsPrize);
 prizeShareChart.render();
 
-// var countries = ['United States','United Kingdom','Germany','France','Sweden','Russia','Switzerland','Japan','Canada','Austria','Netherlands',
-// 'Italy','Poland','Denmark','Norway','India','Australia','South Africa','China'];
-
 var usLaureates = 0;
 var ukLaureates = 0;
 var germanyLaureates = 0;
@@ -202,14 +211,14 @@ function fetchData (url){
 
 fetchData(url);
 
-//List of countries by Nobel laureates per capita
+//List of countries by Nobel laureates per capita: to speed up, use hardcode here.
 var optionsRank = {
   series: [{
   name: 'Laureates/10 million people',
   data: [33, 30, 25, 24, 24, 19, 14, 14, 13, 12, 12, 11,9,7,5,3,2,2,2,0.06]
 }],
   chart: {
-  height: 350,
+  height: '500px',
   type: 'bar',
 },
 plotOptions: {
@@ -291,9 +300,7 @@ subtitle:{
 var countryRank = new ApexCharts(document.querySelector("#countryRank"), optionsRank);
 countryRank.render();
 
-// Bar
-
-// NobelPrize API 2.0 format
+// NobelPrize API 2.0 format. Could not find documendation that explains the data scheme.
 // {
 //   "laureates":[
 //   {
