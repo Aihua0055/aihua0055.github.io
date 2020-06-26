@@ -1,0 +1,52 @@
+
+#hdi {
+    width:50%;
+    float: left;
+}
+
+ #chart-wrap {
+    max-width: 650px;
+    position: relative;
+    margin: 35px auto;
+  }
+
+
+  .selection{
+      margin-left: 200px;
+  }
+
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+.row > div[class^='col'] {
+  padding: 10px;
+  border: 10px solid white;
+  background-color: white;
+}
+
+.card {
+  border:0,0,0,0;
+
+}
+
+
+  
+
+

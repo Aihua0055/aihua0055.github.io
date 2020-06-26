@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+    <title>Explore the World</title>
+    <link rel="icon" href="images/global.png" type="image/png">
+    <link rel="stylesheet" href="custom.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> 
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Explore the World</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Home </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="global.html">Global</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="hdi.html">HDI<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gdp.html">GDP</a>
+          </li>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="nobel.html">Nobel Laureate</a>
+        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="hdi.html">Motivation</a>
+              <a class="dropdown-item" href="#">Data Source</a>
+              <a class="dropdown-item" href="#">Reference</a>
+              <a class="dropdown-item" href="#">Contact</a>
+    
+
+
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron">
+      <h1 class="display-4">Nobel Prizes and Laureates</h1>
+      <p>The Nobel Prize is an international award administered by the Nobel Foundation in Stockholm, Sweden, and based on the fortune of Alfred Nobel, Swedish inventor and entrepreneur. In 1968, Sveriges Riksbank established The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel, founder of the Nobel Prize. Each prize consists of a medal, a personal diploma, and a cash award.</p>
+      <p>A person or organisation awarded the Nobel Prize is called Nobel Laureate. The word “laureate” refers to being signified by the laurel wreath. In ancient Greece, laurel wreaths were awarded to victors as a sign of honour. 
+      <br>Between <span style="color:red">1901 and 2019</span>, the Nobel Prizes and the Prize in Economic Sciences were awarded <span style="color:red">597</span> times to <span style="color:red">950</span> people and organisations.
+      A full list of all Nobel Laureates from 1901-2019 is visualized in this page.</p>
+     
+  </div>
+
+  <div class = "container">
+    <h4>80 Years Gap: the youngest and oldest Nobel Laureate  </h4>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12">
+        <div  style="width: 30rem">
+          <div class="card-body">
+            <h5 class="card-title">Malala Yousafzai, age 17, the youngest</h5>
+            <h6 class="card-subtitle mb-2 text-muted">The Nobel Prize in Peace 2014<br>Prize share:1/2</h6>
+            <p class="card-text">The Nobel Peace Prize 2014 was awarded jointly to Kailash Satyarthi and Malala Yousafzai "for their struggle against the suppression of children and young people and for the right of all children to education."</p>
+            <a href="https://www.nobelprize.org/prizes/peace/2014/yousafzai/facts/" class="card-link">Learn more about Malala Yousafzai</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div  style="width: 30rem">
+          <div class="card-body">
+            <h5 class="card-title">John B. Goodenough, age 97, the Oldest</h5>
+            <h6 class="card-subtitle mb-2 text-muted">The Nobel Prize in Chemistry 2019<br>Prize share:1/3</h6>
+            <p class="card-text">Prize motivation: "for the development of lithium-ion batteries."</p>
+            <a href="#" class="card-link">Learn more about John B. Goodenough</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div id = "genderChart" class="col-lg-3 col-md-3 col-12" ></div> -->
+    </div>
+    <hr>
+    <div class = "row">
+      <div id = "genderChart" class="col-lg-6 col-md-6 col-12 "></div>
+      <div id = "prizeShareChart" class="col-lg-6 col-md-6 col-12"></div>
+    </div>
+    <hr>
+    <div class="row">
+      <div id = "chart" class="col-lg-6 col-md-6 col-12 "></div>
+      <div id = "countryRank" class="col-lg-6 col-md-6 col-12"></div>
+    </div>
+    <p>Data Source: 
+      <a href = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/AGAFAQ">Harvard Dataverse,</a>
+      <a href = "https://api.nobelprize.org/2.0/laureates">NobelPrize API 2.0,</a>
+      <a href = "https://en.wikipedia.org/wiki/List_of_countries_by_Nobel_laureates_per_capita">Wikipedia:List of countries by Nobel laureates per capita.</a>
+
+    
+    </p>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12 ">span 12/8</div>
+      <div class="col-lg-6 col-md-6 col-12">span 6/4</div>
+    </div>
+    <div></div>
+
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Theme uses Bootstrap. Inspired by <a href="https://ourworldindata.org">Our World in Data</a></span>
+    </div>
+  </footer>
+    <script src="nobel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+   
+   
+</body>
+  
+</html>
+
+
